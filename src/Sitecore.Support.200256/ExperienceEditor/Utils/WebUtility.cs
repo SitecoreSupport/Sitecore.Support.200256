@@ -354,6 +354,11 @@ namespace Sitecore.Support.ExperienceEditor.Utils
         {
             switch (fieldTypeKey)
             {
+                #region sitecore.support.200256
+                case "image":
+                    value = value.Replace(" ></image>", " />");
+                    break;
+                #endregion sitecore.support.200256
                 case "html":
                 case "rich text":
                     value = value.TrimEnd(new char[]
